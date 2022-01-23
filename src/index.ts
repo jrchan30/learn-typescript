@@ -156,3 +156,14 @@ class Employee extends Person {
 }
 const emp = new Employee(2, 'Russell', 'Frontend Developer');
 console.log(emp.name, emp.register(), emp.position);
+
+/**
+ * Generics
+ */
+function getArray<T>(items: T[]): T[] {
+  return new Array().concat(items);
+}
+let numArray = getArray<number>([1, 2, 3, 4]);
+let strArray = getArray<string>(['Jonathan', 'Russell', 'Chan']);
+// numArray.push('hello') // Error can't assign str to type num
+// strArray.push(false) // Error can't assign bool to type string
