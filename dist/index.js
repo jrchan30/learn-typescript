@@ -50,5 +50,15 @@ var Direction2;
 console.log(Direction2.Up); // Up
 const user = {
     id: 1,
-    name: 'John',
+    name: 'Russell',
 };
+const tempUser = {
+    address: 'Jln. Kelapa Gading',
+    umur: 21,
+};
+/**
+ * Type Assertion
+ */
+let cid = 1;
+// let customerId = <number>cid // Method 1
+let customerId = cid; // Method 2

@@ -56,12 +56,26 @@ console.log(Direction2.Up); // Up
 /**
  * Objects
  */
-
 type User = {
   id: number;
   name: string;
 };
 const user: User = {
   id: 1,
-  name: 'John',
+  name: 'Russell',
 };
+
+const tempUser: {
+  address: string;
+  umur: number;
+} = {
+  address: 'Jln. Kelapa Gading',
+  umur: 21,
+};
+
+/**
+ * Type Assertion
+ */
+let cid: any = 1;
+// let customerId = <number>cid // Method 1
+let customerId = cid as number; // Method 2
