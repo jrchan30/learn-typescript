@@ -24,3 +24,31 @@ employee = [
   [2, 'test2'],
   [3, 'test3'],
 ];
+
+/**
+ * Union
+ */
+let pid: string | number;
+pid = 20;
+pid = 'hello';
+
+/**
+ * Enum
+ */
+enum Direction1 {
+  Up = 1,
+  Down,
+  Left,
+  Right,
+}
+console.log(Direction1.Up); // 1
+console.log(Direction1.Left); // 3
+
+enum Direction2 {
+  Up = 'Up',
+  Down = 'Down',
+  Left = 'Left',
+  Right = 'Right',
+}
+
+console.log(Direction2.Up); // Up
