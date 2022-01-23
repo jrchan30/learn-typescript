@@ -98,3 +98,28 @@ function log(message: string | number): void {
 }
 log('Hello');
 // log(true) // Error
+
+/**
+ * Interface
+ */
+interface UserInterface {
+  readonly id: number;
+  name: string;
+  age?: number; // Optional property
+}
+
+const user1: UserInterface = {
+  id: 1,
+  name: 'John',
+};
+// user1.id = 5 // Error because readonly
+
+interface MathFunc {
+  (x: number, y: number): number;
+}
+const add: MathFunc = (x: number, y: number): number => x + y;
+const subtract: MathFunc = (x: number, y: number): number => x - y;
+
+// // You cannot assign interface to primitive types
+// type Point = number | string
+// const p1: Point = 1

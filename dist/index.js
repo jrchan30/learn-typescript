@@ -77,4 +77,12 @@ function log(message) {
     console.log(message);
 }
 log('Hello');
-// log(true) // Error
+const user1 = {
+    id: 1,
+    name: 'John',
+};
+const add = (x, y) => x + y;
+const subtract = (x, y) => x - y;
+// // You cannot assign interface to primitive types
+// type Point = number | string
+// const p1: Point = 1
