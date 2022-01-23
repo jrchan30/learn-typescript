@@ -82,3 +82,19 @@ let customerId = cid as number; // Method 2
 
 let customerId2 = cid as boolean;
 // customerId2 = "string" // Error
+
+/**
+ * Functions
+ */
+function addNum(x: number, y: number): number {
+  return x + y;
+}
+console.log(addNum(1, 2));
+// console.log(addNum("1", "3")) // Error
+
+// Void
+function log(message: string | number): void {
+  console.log(message);
+}
+log('Hello');
+// log(true) // Error

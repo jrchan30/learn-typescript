@@ -64,3 +64,17 @@ let cid = 1;
 let customerId = cid; // Method 2
 let customerId2 = cid;
 // customerId2 = "string" // Error
+/**
+ * Functions
+ */
+function addNum(x, y) {
+    return x + y;
+}
+console.log(addNum(1, 2));
+// console.log(addNum("1", "3")) // Error
+// Void
+function log(message) {
+    console.log(message);
+}
+log('Hello');
+// log(true) // Error
