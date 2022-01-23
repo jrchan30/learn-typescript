@@ -103,7 +103,7 @@ log('Hello');
  * Interface
  */
 interface UserInterface {
-  readonly id: number;
+  readonly id: number; // readonly cannot be changed
   name: string;
   age?: number; // Optional property
 }
@@ -123,3 +123,36 @@ const subtract: MathFunc = (x: number, y: number): number => x - y;
 // // You cannot assign interface to primitive types
 // type Point = number | string
 // const p1: Point = 1
+
+/**
+ * Classes
+ */
+interface PersonInterface {
+  id: number;
+  name: string;
+  register(): string;
+}
+class Person implements PersonInterface {
+  id: number;
+  name: string;
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
+  }
+  register() {
+    return `${this.name} is now registered`;
+  }
+}
+const person1 = new Person(1, 'Jonathan');
+console.log(person1.register()); // Jonathan is now registered
+
+// Subclass
+class Employee extends Person {
+  position: string;
+  constructor(id: number, name: string, position: string) {
+    super(id, name);
+    this.position = position;
+  }
+}
+const emp = new Employee(2, 'Russell', 'Frontend Developer');
+console.log(emp.name, emp.register(), emp.position);

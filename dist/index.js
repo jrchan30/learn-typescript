@@ -83,6 +83,23 @@ const user1 = {
 };
 const add = (x, y) => x + y;
 const subtract = (x, y) => x - y;
-// // You cannot assign interface to primitive types
-// type Point = number | string
-// const p1: Point = 1
+class Person {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    register() {
+        return `${this.name} is now registered`;
+    }
+}
+const person1 = new Person(1, 'Jonathan');
+console.log(person1.register()); // Jonathan is now registered
+// Subclass
+class Employee extends Person {
+    constructor(id, name, position) {
+        super(id, name);
+        this.position = position;
+    }
+}
+const emp = new Employee(2, 'Russell', 'Frontend Developer');
+console.log(emp.name, emp.register(), emp.position);
