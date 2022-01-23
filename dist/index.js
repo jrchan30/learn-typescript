@@ -62,3 +62,5 @@ const tempUser = {
 let cid = 1;
 // let customerId = <number>cid // Method 1
 let customerId = cid; // Method 2
+let customerId2 = cid;
+// customerId2 = "string" // Error

@@ -79,3 +79,6 @@ const tempUser: {
 let cid: any = 1;
 // let customerId = <number>cid // Method 1
 let customerId = cid as number; // Method 2
+
+let customerId2 = cid as boolean;
+// customerId2 = "string" // Error
